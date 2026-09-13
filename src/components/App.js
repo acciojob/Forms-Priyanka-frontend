@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 import Form from "./Form";
 import FormRef from "./FormRef";
@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <nav>
-        <Link id="form-link" to="/">
+        <Link id="form-link" to="/form">
           Form
         </Link>
 
@@ -23,7 +23,7 @@ function App() {
       </nav>
 
       <Switch>
-        <Route exact path="/" component={Form} />
+        <Route exact path="/form" component={Form} />
         <Route path="/form-ref" component={FormRef} />
         <Route path="/form-state" component={FormState} />
       </Switch>
